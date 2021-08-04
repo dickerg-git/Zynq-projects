@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jul 27 17:37:48 2021
+# Process ID: 52248
+# Current directory: C:/Users/roger.dickerson/Projects/Xilinx/workspace/Platform_0709_Base_Z7/Platform_0709_Base_Z7.runs/Z7_Zynq_base_axi_iic_0_0_synth_1
+# Command line: vivado.exe -log Z7_Zynq_base_axi_iic_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Z7_Zynq_base_axi_iic_0_0.tcl
+# Log file: C:/Users/roger.dickerson/Projects/Xilinx/workspace/Platform_0709_Base_Z7/Platform_0709_Base_Z7.runs/Z7_Zynq_base_axi_iic_0_0_synth_1/Z7_Zynq_base_axi_iic_0_0.vds
+# Journal file: C:/Users/roger.dickerson/Projects/Xilinx/workspace/Platform_0709_Base_Z7/Platform_0709_Base_Z7.runs/Z7_Zynq_base_axi_iic_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Z7_Zynq_base_axi_iic_0_0.tcl -notrace

@@ -1,0 +1,7 @@
+/*BSP_0727_LED_EN*/
+the_ROM_image:
+{
+  [bootloader]<BSP_0727_LED_EN/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

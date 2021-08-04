@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul 15 22:56:55 2021
+# Process ID: 855440
+# Current directory: C:/Users/roger.dickerson/Projects/Xilinx/workspace/Platform_0701_Z7/Platform_0701_Z7.runs/Z7_CPU_0_axi_gpio_2_0_synth_1
+# Command line: vivado.exe -log Z7_CPU_0_axi_gpio_2_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Z7_CPU_0_axi_gpio_2_0.tcl
+# Log file: C:/Users/roger.dickerson/Projects/Xilinx/workspace/Platform_0701_Z7/Platform_0701_Z7.runs/Z7_CPU_0_axi_gpio_2_0_synth_1/Z7_CPU_0_axi_gpio_2_0.vds
+# Journal file: C:/Users/roger.dickerson/Projects/Xilinx/workspace/Platform_0701_Z7/Platform_0701_Z7.runs/Z7_CPU_0_axi_gpio_2_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source Z7_CPU_0_axi_gpio_2_0.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP Z7_CPU_0_axi_gpio_2_0, cache-ID = 46f9d060891a8bb3.
+INFO: [Common 17-206] Exiting Vivado at Thu Jul 15 22:57:07 2021...
