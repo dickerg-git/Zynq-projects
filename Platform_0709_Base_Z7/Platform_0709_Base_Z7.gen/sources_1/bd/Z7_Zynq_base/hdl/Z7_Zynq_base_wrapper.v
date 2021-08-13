@@ -1,7 +1,7 @@
 //Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-//Date        : Tue Jul 27 17:37:23 2021
+//Date        : Wed Aug  4 22:15:59 2021
 //Host        : FTC-48JVN53 running 64-bit major release  (build 9200)
 //Command     : generate_target Z7_Zynq_base_wrapper.bd
 //Design      : Z7_Zynq_base_wrapper

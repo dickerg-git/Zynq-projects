@@ -677,6 +677,13 @@
 
 //MODULE DECLARATION
  module Z7_Zynq_base_processing_system7_0_0 (
+  TTC0_WAVE0_OUT,
+  TTC0_WAVE1_OUT,
+  TTC0_WAVE2_OUT,
+  TTC1_WAVE0_OUT,
+  TTC1_WAVE1_OUT,
+  TTC1_WAVE2_OUT,
+  WDT_RST_OUT,
   USB0_PORT_INDCTL,
   USB0_VBUS_PWRSELECT,
   USB0_VBUS_PWRFAULT,
@@ -805,6 +812,13 @@
 
 //INPUT AND OUTPUT PORTS
 
+      output  TTC0_WAVE0_OUT;
+      output  TTC0_WAVE1_OUT;
+      output  TTC0_WAVE2_OUT;
+      output  TTC1_WAVE0_OUT;
+      output  TTC1_WAVE1_OUT;
+      output  TTC1_WAVE2_OUT;
+      output  WDT_RST_OUT;
       output  [1 : 0] USB0_PORT_INDCTL;
       output  USB0_VBUS_PWRSELECT;
       input  USB0_VBUS_PWRFAULT;
@@ -873,6 +887,13 @@
 
 //REG DECLARATIONS
 
+      reg TTC0_WAVE0_OUT;
+      reg TTC0_WAVE1_OUT;
+      reg TTC0_WAVE2_OUT;
+      reg TTC1_WAVE0_OUT;
+      reg TTC1_WAVE1_OUT;
+      reg TTC1_WAVE2_OUT;
+      reg WDT_RST_OUT;
       reg [1 : 0] USB0_PORT_INDCTL;
       reg USB0_VBUS_PWRSELECT;
       reg M_AXI_GP0_ARVALID;

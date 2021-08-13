@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Jul 27 17:41:01 2021
-# Process ID: 78960
-# Current directory: C:/Users/roger.dickerson/Projects/Xilinx/workspace/Platform_0709_Base_Z7/Platform_0709_Base_Z7.runs/synth_1
+# Start of session at: Wed Aug  4 22:18:10 2021
+# Process ID: 87468
+# Current directory: C:/Users/roger.dickerson/Projects/Xilinx/GIT Workspace/Zynq-projects/Platform_0709_Base_Z7/Platform_0709_Base_Z7.runs/synth_1
 # Command line: vivado.exe -log Z7_Zynq_base_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Z7_Zynq_base_wrapper.tcl
-# Log file: C:/Users/roger.dickerson/Projects/Xilinx/workspace/Platform_0709_Base_Z7/Platform_0709_Base_Z7.runs/synth_1/Z7_Zynq_base_wrapper.vds
-# Journal file: C:/Users/roger.dickerson/Projects/Xilinx/workspace/Platform_0709_Base_Z7/Platform_0709_Base_Z7.runs/synth_1\vivado.jou
+# Log file: C:/Users/roger.dickerson/Projects/Xilinx/GIT Workspace/Zynq-projects/Platform_0709_Base_Z7/Platform_0709_Base_Z7.runs/synth_1/Z7_Zynq_base_wrapper.vds
+# Journal file: C:/Users/roger.dickerson/Projects/Xilinx/GIT Workspace/Zynq-projects/Platform_0709_Base_Z7/Platform_0709_Base_Z7.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source Z7_Zynq_base_wrapper.tcl -notrace

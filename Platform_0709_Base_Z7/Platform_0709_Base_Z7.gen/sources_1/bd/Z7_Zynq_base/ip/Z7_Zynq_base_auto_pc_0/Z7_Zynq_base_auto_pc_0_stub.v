@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Tue Jul 27 17:40:58 2021
+// Date        : Tue Jul 27 17:40:57 2021
 // Host        : FTC-48JVN53 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/roger.dickerson/Projects/Xilinx/workspace/Platform_0709_Base_Z7/Platform_0709_Base_Z7.gen/sources_1/bd/Z7_Zynq_base/ip/Z7_Zynq_base_auto_pc_0/Z7_Zynq_base_auto_pc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top Z7_Zynq_base_auto_pc_0 -prefix
+//               Z7_Zynq_base_auto_pc_0_ Z7_Zynq_base_auto_pc_0_stub.v
 // Design      : Z7_Zynq_base_auto_pc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1

@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Tue Jul 27 17:40:58 2021
+// Date        : Tue Jul 27 17:40:57 2021
 // Host        : FTC-48JVN53 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/roger.dickerson/Projects/Xilinx/workspace/Platform_0709_Base_Z7/Platform_0709_Base_Z7.gen/sources_1/bd/Z7_Zynq_base/ip/Z7_Zynq_base_auto_pc_0/Z7_Zynq_base_auto_pc_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Z7_Zynq_base_auto_pc_0 -prefix
+//               Z7_Zynq_base_auto_pc_0_ Z7_Zynq_base_auto_pc_0_sim_netlist.v
 // Design      : Z7_Zynq_base_auto_pc_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -335,10 +335,10 @@ endmodule
 (* C_AXI_RUSER_WIDTH = "1" *) (* C_AXI_SUPPORTS_READ = "1" *) (* C_AXI_SUPPORTS_USER_SIGNALS = "0" *) 
 (* C_AXI_SUPPORTS_WRITE = "1" *) (* C_AXI_WUSER_WIDTH = "1" *) (* C_FAMILY = "zynq" *) 
 (* C_IGNORE_ID = "0" *) (* C_M_AXI_PROTOCOL = "2" *) (* C_S_AXI_PROTOCOL = "1" *) 
-(* C_TRANSLATION_MODE = "2" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* ORIG_REF_NAME = "axi_protocol_converter_v2_1_22_axi_protocol_converter" *) 
-(* P_AXI3 = "1" *) (* P_AXI4 = "0" *) (* P_AXILITE = "2" *) 
-(* P_AXILITE_SIZE = "3'b010" *) (* P_CONVERSION = "2" *) (* P_DECERR = "2'b11" *) 
-(* P_INCR = "2'b01" *) (* P_PROTECTION = "1" *) (* P_SLVERR = "2'b10" *) 
+(* C_TRANSLATION_MODE = "2" *) (* DowngradeIPIdentifiedWarnings = "yes" *) (* P_AXI3 = "1" *) 
+(* P_AXI4 = "0" *) (* P_AXILITE = "2" *) (* P_AXILITE_SIZE = "3'b010" *) 
+(* P_CONVERSION = "2" *) (* P_DECERR = "2'b11" *) (* P_INCR = "2'b01" *) 
+(* P_PROTECTION = "1" *) (* P_SLVERR = "2'b10" *) 
 module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_axi_protocol_converter
    (aclk,
     aresetn,
@@ -715,7 +715,6 @@ module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_axi_protocol_conver
         .s_axi_rvalid(s_axi_rvalid));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_22_b2s" *) 
 module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s
    (s_axi_rvalid,
     s_axi_awready,
@@ -1183,7 +1182,6 @@ module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_22_b2s_ar_channel" *) 
 module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_ar_channel
    (sel_first,
     sel_first_reg,
@@ -1516,7 +1514,6 @@ module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_ar_channel
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_22_b2s_aw_channel" *) 
 module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_aw_channel
    (sel_first_0,
     sel_first,
@@ -1828,7 +1825,6 @@ module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_aw_channel
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_22_b2s_b_channel" *) 
 module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_b_channel
    (si_rs_bvalid,
     cnt_read,
@@ -2094,7 +2090,6 @@ module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_b_channel
         .R(areset_d1));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_22_b2s_cmd_translator" *) 
 module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_cmd_translator
    (next_pending_r,
     next_pending_r_0,
@@ -2514,7 +2509,6 @@ module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_cmd_translator_
         .\wrap_second_len_r_reg[3]_1 (\wrap_second_len_r_reg[3]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_22_b2s_incr_cmd" *) 
 module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_incr_cmd
    (next_pending_r,
     sel_first_reg_0,
@@ -3551,7 +3545,6 @@ module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_incr_cmd_2
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_22_b2s_r_channel" *) 
 module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_r_channel
    (\cnt_read_reg[2] ,
     \cnt_read_reg[4] ,
@@ -3713,7 +3706,6 @@ module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_r_channel
         .r_push_r_reg(r_push_r_reg_0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_22_b2s_rd_cmd_fsm" *) 
 module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_rd_cmd_fsm
    (D,
     axaddr_offset,
@@ -4287,7 +4279,6 @@ module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_rd_cmd_fsm
         .O(\wrap_second_len_r_reg[3] [3]));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_22_b2s_simple_fifo" *) 
 module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_simple_fifo
    (sel,
     addr,
@@ -5730,7 +5721,6 @@ module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_simple_fifo__pa
         .Q31(\NLW_memory_reg[31][9]_srl32_Q31_UNCONNECTED ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_22_b2s_wr_cmd_fsm" *) 
 module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_wr_cmd_fsm
    (D,
     axaddr_offset,
@@ -6352,7 +6342,6 @@ module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_wr_cmd_fsm
         .O(\wrap_second_len_r_reg[3] [3]));
 endmodule
 
-(* ORIG_REF_NAME = "axi_protocol_converter_v2_1_22_b2s_wrap_cmd" *) 
 module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_wrap_cmd
    (next_pending_r_0,
     sel_first,
@@ -7338,7 +7327,6 @@ module Z7_Zynq_base_auto_pc_0_axi_protocol_converter_v2_1_22_b2s_wrap_cmd_3
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_22_axi_register_slice" *) 
 module Z7_Zynq_base_auto_pc_0_axi_register_slice_v2_1_22_axi_register_slice
    (s_ready_i_reg,
     s_ready_i_reg_0,
@@ -7704,7 +7692,6 @@ module Z7_Zynq_base_auto_pc_0_axi_register_slice_v2_1_22_axi_register_slice
         .\skid_buffer_reg[46]_0 (\skid_buffer_reg[46] ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_register_slice_v2_1_22_axic_register_slice" *) 
 module Z7_Zynq_base_auto_pc_0_axi_register_slice_v2_1_22_axic_register_slice
    (s_ready_i_reg_0,
     si_rs_arvalid,

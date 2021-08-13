@@ -1,0 +1,7 @@
+/*BSD_0805_Z7*/
+the_ROM_image:
+{
+  [bootloader]<BSD_0805_Z7/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

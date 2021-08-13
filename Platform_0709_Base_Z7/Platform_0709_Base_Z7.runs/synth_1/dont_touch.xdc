@@ -28,13 +28,13 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Z7_Zynq_bas
 # IP: bd/Z7_Zynq_base/ip/Z7_Zynq_base_xbar_0/Z7_Zynq_base_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Z7_Zynq_base_xbar_0 || ORIG_REF_NAME==Z7_Zynq_base_xbar_0} -quiet] -quiet
 
-# IP: bd/Z7_Zynq_base/ip/Z7_Zynq_base_auto_pc_0/Z7_Zynq_base_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Z7_Zynq_base_auto_pc_0 || ORIG_REF_NAME==Z7_Zynq_base_auto_pc_0} -quiet] -quiet
-
 # IP: bd/Z7_Zynq_base/ip/Z7_Zynq_base_ps7_0_axi_periph_0/Z7_Zynq_base_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Z7_Zynq_base_ps7_0_axi_periph_0 || ORIG_REF_NAME==Z7_Zynq_base_ps7_0_axi_periph_0} -quiet] -quiet
 
 # IP: bd/Z7_Zynq_base/ip/Z7_Zynq_base_rst_ps7_0_100M_0/Z7_Zynq_base_rst_ps7_0_100M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Z7_Zynq_base_rst_ps7_0_100M_0 || ORIG_REF_NAME==Z7_Zynq_base_rst_ps7_0_100M_0} -quiet] -quiet
 
-# XDC: c:/Users/roger.dickerson/Projects/Xilinx/workspace/Platform_0709_Base_Z7/Platform_0709_Base_Z7.gen/sources_1/bd/Z7_Zynq_base/Z7_Zynq_base_ooc.xdc
+# IP: bd/Z7_Zynq_base/ip/Z7_Zynq_base_auto_pc_0/Z7_Zynq_base_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==Z7_Zynq_base_auto_pc_0 || ORIG_REF_NAME==Z7_Zynq_base_auto_pc_0} -quiet] -quiet
+
+# XDC: c:/Users/roger.dickerson/Projects/Xilinx/GIT Workspace/Zynq-projects/Platform_0709_Base_Z7/Platform_0709_Base_Z7.gen/sources_1/bd/Z7_Zynq_base/Z7_Zynq_base_ooc.xdc

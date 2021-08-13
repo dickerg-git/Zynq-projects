@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Tue Jul 27 17:43:24 2021
+| Date             : Wed Aug  4 22:20:27 2021
 | Host             : FTC-48JVN53 running 64-bit major release  (build 9200)
 | Command          : report_power -file Z7_Zynq_base_wrapper_power_routed.rpt -pb Z7_Zynq_base_wrapper_power_summary_routed.pb -rpx Z7_Zynq_base_wrapper_power_routed.rpx
 | Design           : Z7_Zynq_base_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.420        |
+| Total On-Chip Power (W)  | 1.422        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.282        |
+| Dynamic (W)              | 1.284        |
 | Device Static (W)        | 0.138        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 68.6         |
@@ -52,20 +52,20 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.009 |        4 |       --- |             --- |
-| Slice Logic              |     0.002 |     4595 |       --- |             --- |
-|   LUT as Logic           |     0.002 |     1542 |     53200 |            2.90 |
+| Clocks                   |     0.010 |        4 |       --- |             --- |
+| Slice Logic              |     0.002 |     4588 |       --- |             --- |
+|   LUT as Logic           |     0.002 |     1543 |     53200 |            2.90 |
 |   Register               |    <0.001 |     2171 |    106400 |            2.04 |
 |   CARRY4                 |    <0.001 |       31 |     13300 |            0.23 |
 |   LUT as Distributed RAM |    <0.001 |       16 |     17400 |            0.09 |
 |   LUT as Shift Register  |    <0.001 |       72 |     17400 |            0.41 |
 |   F7/F8 Muxes            |    <0.001 |       14 |     53200 |            0.03 |
 |   Others                 |     0.000 |      320 |       --- |             --- |
-| Signals                  |     0.003 |     3298 |       --- |             --- |
+| Signals                  |     0.003 |     3295 |       --- |             --- |
 | I/O                      |     0.012 |       52 |       125 |           41.60 |
 | PS7                      |     1.256 |        1 |       --- |             --- |
 | Static Power             |     0.138 |          |           |                 |
-| Total                    |     1.420 |          |           |                 |
+| Total                    |     1.422 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -75,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.028 |       0.015 |      0.013 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.029 |       0.016 |      0.013 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.015 |       0.000 |      0.014 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -151,17 +151,17 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| Z7_Zynq_base_wrapper     |     1.282 |
-|   Z7_Zynq_base_i         |     1.270 |
+| Z7_Zynq_base_wrapper     |     1.284 |
+|   Z7_Zynq_base_i         |     1.271 |
 |     axi_gpio_2           |     0.002 |
 |       U0                 |     0.002 |
 |     axi_iic_0            |     0.002 |
 |       U0                 |     0.002 |
 |     axi_quad_spi_0       |     0.004 |
 |       U0                 |     0.004 |
-|     processing_system7_0 |     1.256 |
-|       inst               |     1.256 |
-|     ps7_0_axi_periph     |     0.004 |
+|     processing_system7_0 |     1.257 |
+|       inst               |     1.257 |
+|     ps7_0_axi_periph     |     0.005 |
 |       s00_couplers       |     0.004 |
 +--------------------------+-----------+
 

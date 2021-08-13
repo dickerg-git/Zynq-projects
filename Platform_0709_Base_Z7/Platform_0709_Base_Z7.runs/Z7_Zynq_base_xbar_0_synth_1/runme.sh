@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/roger.dickerson/Projects/Xilinx/workspace/Platform_0709_Base_Z7/Platform_0709_Base_Z7.runs/Z7_Zynq_base_xbar_0_synth_1'
+HD_PWD='C:/Users/roger.dickerson/Projects/Xilinx/GIT Workspace/Zynq-projects/Platform_0709_Base_Z7/Platform_0709_Base_Z7.runs/Z7_Zynq_base_xbar_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
