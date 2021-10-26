@@ -53,19 +53,14 @@
 
 int main()
 {
-	unsigned char rx_buffer[1024];
+	unsigned char rx_buffer[1024] = {1,2,3,4,5,6,7,8};
 
     init_platform();
     init_spi0_dev();
     WriteRamEnable( CS0 );
     ReadRamStatus( CS0 );
 
-    rx_buffer[0] = 1;
-    rx_buffer[1] = 2;
-    rx_buffer[2] = 3;
-    rx_buffer[3] = 4;
-
-    unsigned int tx_len = 4;
+    unsigned int tx_len = 8;
     WriteRamData( CS0,
     		tx_len,
     		0x7F000,
@@ -77,9 +72,13 @@ int main()
     		0x7F000,
     		rx_buffer);
 
+#ifdef TEST_PRINT
     unsigned int d = rx_len;
     while(d--)
         printf("%x: %x\r\n",d,rx_buffer[d]);
+#endif
+
+    NVRAM_Test1();
 
     print("Hello RGD World\n\r");
     print("Successfully ran Hello World application\n\r");

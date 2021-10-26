@@ -10,6 +10,7 @@
 #define   WRITE_STATUS            (unsigned char)0x01
 #define   WRITE_DATA              (unsigned char)0x02
 #define   READ_DATA               (unsigned char)0x03
+#define   WRITE_DISABLE           (unsigned char)0x04
 #define   READ_STATUS             (unsigned char)0x05
 #define   WRITE_ENABLE            (unsigned char)0x06
 
@@ -34,22 +35,30 @@
 //        static const ushort FOUR_BYTE_COMMAND       = 4;        // Sends four transmit bytes
 
 
+unsigned int NVRAM_Test1();
 
 unsigned int init_spi0_dev();
 
 unsigned int ReadRamStatus( unsigned int chip_sel );
 unsigned int WriteRamEnable( unsigned int chip_sel );
+unsigned int WriteRamDisable( unsigned int chip_sel );
 unsigned int WriteRamBlockProtection( unsigned int chip_sel );
 
 unsigned int WriteRamData( unsigned int chip_sel,
 		unsigned int tx_length,
 		unsigned int write_address,
 		unsigned char * tx_buffer);
+unsigned int WriteRamWord( unsigned int chip_sel,
+		unsigned int * write_word,
+		unsigned int write_address);
 
 unsigned int ReadRamData( unsigned int chip_sel,
 		unsigned int rx_length,
 		unsigned int read_address,
 		unsigned char * rx_buffer);
+unsigned int ReadRamWord( unsigned int chip_sel,
+		unsigned int * read_word,
+		unsigned int read_address);
 
 typedef enum
 {

@@ -21,6 +21,30 @@ unsigned char WriteBuff[256];
 unsigned char ReadBuff[256];
 
 
+
+unsigned int NVRAM_Test1()
+{
+    unsigned int r_word = 0;
+
+    ReadRamWord( CS0, &r_word, 0x7F000);
+    ReadRamWord( CS0, &r_word, 0x7F001);
+    ReadRamWord( CS0, &r_word, 0x7F002);
+    ReadRamWord( CS0, &r_word, 0x7F003);
+    ReadRamWord( CS0, &r_word, 0x7F004);
+
+    unsigned int w_word = 0x03040506;
+    WriteRamWord( CS0, &w_word, 0x7F010);
+    ReadRamWord( CS0, &r_word, 0x7F010);
+
+    w_word = 0;
+    WriteRamDisable( CS0 );
+    ReadRamStatus( CS0 );
+    WriteRamWord( CS0, &w_word, 0x7F010);
+    ReadRamWord( CS0, &r_word, 0x7F010);
+
+    return XST_SUCCESS;
+}
+
     //
     // Initialize the Xilinx SPI 0 instance
     //
@@ -124,6 +148,8 @@ unsigned int ReadRamStatus( unsigned int chip_sel )
 
         if ((ReadBuff[1] & WRITE_ENABLE_LATCH) == WRITE_ENABLE_LATCH)
         	xil_printf("%s RAM Write enabled\r\n", __func__);
+        else
+        	xil_printf("%s RAM Write disabled\r\n", __func__);
 
 	    return XST_SUCCESS;
 }
@@ -133,6 +159,24 @@ unsigned int WriteRamEnable( unsigned int chip_sel )
 	TransferParams Params;
 
     WriteBuff[0] = WRITE_ENABLE;
+
+    Params.Select = CS0;
+    Params.XferLength = 1;
+    Params.WriteSize = 1;
+    Params.WriteBuffer = WriteBuff;
+    Params.ReadSize = 0;
+    Params.ReadBuffer = ReadBuff;
+
+    RamPolledTransfer(&Params);
+
+    return XST_SUCCESS;
+}
+
+unsigned int WriteRamDisable( unsigned int chip_sel )
+{
+	TransferParams Params;
+
+    WriteBuff[0] = WRITE_DISABLE;
 
     Params.Select = CS0;
     Params.XferLength = 1;
@@ -197,6 +241,42 @@ unsigned int ReadRamData( unsigned int chip_sel,
 	    return error;
 }
 
+unsigned int ReadRamWord( unsigned int chip_sel,
+		unsigned int * read_word,
+		unsigned int read_address)
+{
+	unsigned int error = XST_SUCCESS;
+	unsigned int word = 0;
+
+	    // Use one load of FIFO, single transfer only.
+	    //if( rx_length > 120 ) return XST_INVALID_PARAM;
+
+		TransferParams Params;
+	    WriteBuff[0] = READ_DATA;
+	    WriteBuff[1] = (unsigned char)(read_address >> 16);
+	    WriteBuff[2] = (unsigned char)(read_address >>  8);
+	    WriteBuff[3] = (unsigned char)(read_address);
+
+	    Params.Select = CS0;
+	    Params.XferLength = 4 + 4;
+	    Params.WriteSize = 4; // 4 byte command data
+	    Params.WriteBuffer = WriteBuff;
+	    Params.ReadSize = 4;
+	    Params.ReadBuffer = ReadBuff;
+
+	    // Begin Read operation
+	    error = RamPolledTransfer(&Params);
+
+	    // Convert the 4 byte response to a word.
+	    word  = ReadBuff[7] << 24;
+	    word += ReadBuff[6] << 16;
+	    word += ReadBuff[5] << 8;
+	    word += ReadBuff[4];
+	    *read_word = word;
+
+	    return error;
+}
+
 unsigned int WriteRamData( unsigned int chip_sel,
 		unsigned int tx_length,
 		unsigned int write_address,
@@ -222,6 +302,41 @@ unsigned int WriteRamData( unsigned int chip_sel,
 
 	    // Append the user buffer to the working buffer, skip over command
 	    memcpy(&WriteBuff[4], (tx_buffer),  tx_length);
+
+	    // Begin Write operation
+	    error = RamPolledTransfer(&Params);
+
+	    return error;
+}
+
+unsigned int WriteRamWord( unsigned int chip_sel,
+		unsigned int * write_word,
+		unsigned int write_address)
+{
+	unsigned int error = XST_SUCCESS;
+	unsigned int word = 0;
+
+        // Use one load of FIFO, single transfer only.
+        //if( tx_length > 120 ) return XST_INVALID_PARAM;
+
+		TransferParams Params;
+	    WriteBuff[0] = WRITE_DATA;
+	    WriteBuff[1] = (unsigned char)(write_address >> 16);
+	    WriteBuff[2] = (unsigned char)(write_address >>  8);
+	    WriteBuff[3] = (unsigned char)(write_address);
+
+	    Params.Select = CS0;
+	    Params.XferLength = 4 + 4;
+	    Params.WriteSize = 4 + 4; // Command + data stream length
+	    Params.WriteBuffer = WriteBuff;
+	    Params.ReadSize = 0;
+	    Params.ReadBuffer = ReadBuff;
+
+	    word = *write_word;
+	    WriteBuff[4] = word & 0x0FF; word = word >> 8;
+	    WriteBuff[5] = word & 0x0FF; word = word >> 8;
+	    WriteBuff[6] = word & 0x0FF; word = word >> 8;
+	    WriteBuff[7] = word & 0x0FF;
 
 	    // Begin Write operation
 	    error = RamPolledTransfer(&Params);
